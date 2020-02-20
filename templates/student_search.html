@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Find Student{% endblock %}
+
+{% block body %}
+    <form action='/student'>
+        <p>
+        <label>Enter a student's github:</label>
+        <input type='text'name='github'/>
+    </p>
+        <input type='submit' value='Submit Search'/>
+        </form>
+
+
+    <form action = '/add_student' method='POST'>
+        <p>
+        <label>Enter a student's full information:</label><br>
+        <label>First Name</label><br>
+        <input type='text' name='first_name'/><br>
+        <label>Last Name</label><br>
+        <input type='text' name='last_name'/><br>
+        <label>Github</label><br>
+        <input type='text' name='github'/>
+    </p>
+    <input type = 'submit' value = 'Submit Full Info'/>
+</form>
+
+
+{% endblock %}
